@@ -11,7 +11,8 @@ import AuthScreen from "./screens/AuthScreen";
 import WelcomeScreen from "./screens/WelcomeScreen";
 import MapScreen from "./screens/MapScreen";
 import DeckScreen from "./screens/DeckScreen";
-
+import SettingsScreen from "./screens/SettingsScreen";
+import ReviewScreen from "./screens/ReviewScreen";
 const Tabs = TabNavigator({
   Home: {
     screen: AuthScreen,
@@ -28,7 +29,14 @@ const Tabs = TabNavigator({
   main:{
     screen: TabNavigator({
       map: { screen: MapScreen },
-      deck:{ screen: DeckScreen }
+      deck:{ screen: DeckScreen },
+      review:{
+        screen: StackNavigator({
+          review:{ screen: ReviewScreen },
+          settings:{ screen: SettingsScreen }
+
+        })
+      }
 
     })
   }
