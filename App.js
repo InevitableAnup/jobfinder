@@ -14,30 +14,29 @@ import DeckScreen from "./screens/DeckScreen";
 import SettingsScreen from "./screens/SettingsScreen";
 import ReviewScreen from "./screens/ReviewScreen";
 const Tabs = TabNavigator({
-  Home: {
-    screen: AuthScreen,
-    navigationOptions: {
-      tabBarIcon: () => <FontAwesome name="home" size={30} color="black" />
-    }
-  },
   Dashboard: {
     screen: WelcomeScreen,
     navigationOptions: {
       tabBarIcon: () => <FontAwesome name="dashboard" size={30} color="black" />
     }
   },
-  main:{
+  Home: {
+    screen: AuthScreen,
+    navigationOptions: {
+      tabBarIcon: () => <FontAwesome name="home" size={30} color="black" />
+    }
+  },
+
+  main: {
     screen: TabNavigator({
       map: { screen: MapScreen },
-      deck:{ screen: DeckScreen },
-      review:{
+      deck: { screen: DeckScreen },
+      review: {
         screen: StackNavigator({
-          review:{ screen: ReviewScreen },
-          settings:{ screen: SettingsScreen }
-
+          review: { screen: ReviewScreen },
+          settings: { screen: SettingsScreen }
         })
       }
-
     })
   }
 });
