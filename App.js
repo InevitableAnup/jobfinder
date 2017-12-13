@@ -6,6 +6,7 @@ import {
   TabNavigator
 } from "react-navigation";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
+import { Provider } from 'react-redux';
 
 import AuthScreen from "./screens/AuthScreen";
 import WelcomeScreen from "./screens/WelcomeScreen";
